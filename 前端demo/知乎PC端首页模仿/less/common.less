@@ -1,0 +1,172 @@
+//out:../css/common.css
+// 头部导航
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    min-width: 1156px;
+    height: 52px;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+
+    .hd-wrapper {
+        display: flex;
+        justify-content: space-between;
+        margin: 0 auto;
+        max-width: 1156px;
+        min-width: 1000px;
+        height: 52px;
+
+        .left {
+            display: flex;
+            align-items: center;
+
+            .logo {
+                display: inline-block;
+                width: 60px;
+                height: 34px;
+            }
+
+            // 标签
+            ul {
+                display: flex;
+                align-items: center;
+                height: 50px;
+                margin: 0 15px 0 25px;
+
+                li {
+                    padding: 0 15px;
+
+                    a {
+                        display: flex;
+                        align-items: center;
+                        height: 52px;
+                        
+                        color: #8590a6;
+
+                        &.now {
+                            font-weight: 600;
+                            border-bottom: 4px solid #0066FF;
+                            color: #121212;
+                        }
+                        &:hover{
+                            color: #121212;
+                        }
+                    }
+                }
+
+            }
+        }
+
+        // 搜索
+        .search {
+            display: flex;
+            flex: 1;
+            align-items: center;
+            justify-content: center;
+            .editor {
+                display: flex;
+                width: 400px;
+                height: 34px;
+                padding: 0px 0 0px 16px;
+                background-color: #f6f6f6;
+                border-radius: 999px;
+                border: 1px solid #ebebeb;
+                input{
+                    flex: 1;
+                    color: #121212;
+                    font-size: 14px;
+                    background:transparent;
+                    &::placeholder{
+                        color: #8590a6;
+                    }
+                }
+                button {
+                    display: block;
+                    width: 44px;
+                    height: 100%;
+                    text-align: center;
+                    line-height: 34px;
+                    .iconfont{
+                        font-size: 15px;
+                    }   
+                }
+            }
+            .submit{
+                width: 70px;
+                height: 34px;
+                margin-left: 12px;
+                padding: 2px 0;
+                background-color: #06f;
+                border-radius: 999px;
+                button{
+                    width: 100%;
+                    height: 100%;
+                    font-size: 15px;
+                    color: #fff;
+                    text-align: center;
+                }
+            }
+        }
+
+
+        // 我的
+        .right {
+            display: flex;
+            align-items: center;
+            height: 52px;
+            margin-left: 30px;
+
+            a {
+                position: relative;
+                display: block;
+                margin-right: 40px;
+
+                .iconfont {
+                    font-size: 22px;
+                    color: #8590a6;
+                }
+
+                span {
+                    position: absolute;
+                    bottom: 50%;
+                    left: 50%;
+                    display: none;
+                    font-size: 11px;
+                    color: #fff;
+                    padding: 0 4px;
+                    border-radius: 50%;
+                    background-color: rgb(241, 64, 60);
+                    border: 2px solid #fff;
+
+                    &.num {
+                        display: block;
+                    }
+                }
+
+                img {
+                    width: 30px;
+                    height: 30px;
+                }
+
+                &:nth-child(3) {
+                    margin-right: 0;
+                }
+            }
+        }
+    }
+}
+
+// 版心
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+
+// 卡片样式
+.card{
+    background-color: #fff;
+    border-radius: 2px;
+    box-shadow: 0 1px 3px rgb(18 18 18 / 10%);
+}
