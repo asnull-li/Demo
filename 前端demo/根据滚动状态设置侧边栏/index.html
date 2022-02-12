@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            background-color: #eee;
+        }
+        
+        .head {
+            height: 300px;
+            background-color: #fff;
+            border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+        }
+        
+        .banner {
+            height: 550px;
+            background-color: #5C6BC0;
+            margin: 15px 75px;
+        }
+        
+        .main {
+            height: 1500px;
+            background-color: #3F51B5;
+            margin: 15px 75px;
+        }
+        
+        .footer {
+            height: 200px;
+            background: #424242;
+        }
+        
+        .side {
+            position: absolute;
+            right: 20px;
+            top: 350px;
+            height: 300px;
+            width: 50px;
+            background-color: pink;
+            box-shadow: 0 1px 3px rgba(18, 18, 18, 0.1);
+        }
+        
+        .backTop {
+            display: none;
+            position: absolute;
+            bottom: 0;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- 头部区域 -->
+    <div class="head"></div>
+    <!-- 轮播图区域 -->
+    <div class="banner"></div>
+    <!-- 主体区域 -->
+    <div class="main"></div>
+    <!-- 底部区域 -->
+    <div class="footer"></div>
+    <!-- 侧边栏 -->
+    <div class="side">
+        <span class="backTop">返回顶部</span>
+    </div>
+    <script>
+        var banner = document.querySelector('.banner');
+        var main = document.querySelector('.main');
+        var side = document.querySelector('.side');
+        var backEle = document.querySelector('.backTop');
+        var bannerTop = banner.offsetTop;
+        var mainTop = main.offsetTop;
+        // 获取侧边栏应固定到的位置
+        var sideTop = side.offsetTop - bannerTop;
+        // 滚动事件
+        document.addEventListener('scroll', function() {
+            // 获取当前页面滚动距离
+            var pageScroll = window.pageYOffset;
+            // 如果滚动距离到了banner区域
+            if (pageScroll >= bannerTop) {
+                side.style.position = 'fixed';
+                side.style.top = sideTop + 'px';
+            } else {
+                // 恢复绝对定位
+                side.style.position = 'absolute';
+                side.style.top = '350px';
+            }
+
+            if (pageScroll > mainTop) {
+                // 显示返回顶部按钮
+                backEle.style.display = 'block';
+            } else {
+                backEle.style.display = 'none';
+            }
+        })
+    </script>
+
+</body>
+
+</html>
