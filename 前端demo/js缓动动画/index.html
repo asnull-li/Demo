@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            position: absolute;
+            left: 0;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+</head>
+
+<body>
+    <button class="btn500">开启动画500px</button>
+    <button class="btn800">开启动画800px</button>
+    <div class="box"></div>
+    <script>
+        // 获取元素对象
+        var box = document.querySelector('.box');
+        var btn500 = document.querySelector('.btn500');
+        var btn800 = document.querySelector('.btn800');
+
+        btn500.addEventListener('click', function() {
+            //调用动画函数
+            animateX(box, 500, 15, function() {
+                // 动画结束后执行事件
+                console.log('ok');
+            });
+        })
+        btn800.addEventListener('click', function() {
+            //调用动画函数
+            animateX(box, 800, 15);
+        })
+
+        // 封装一个动画函数
+        function animateX(obj, target, speed, callback) {
+            // 防止重复点击造成定时器叠加
+            clearInterval(obj.timer);
+            // 设置一个定时器来执行动画 
+            obj.timer = setInterval(function() {
+                // console.log(box.offsetLeft);
+                // 步长算法
+                var step = (target - obj.offsetLeft) / 10;
+                step = step > 0 ? Math.ceil(step) : Math.floor(step);
+                // 到达目标之后停止定时器
+                if (obj.offsetLeft == target) {
+                    clearInterval(obj.timer);
+                    // 动画结束之后执行回调函数
+                    callback && callback();
+                }
+                obj.style.left = obj.offsetLeft + step + 'px';
+            }, speed)
+        }
+    </script>
+
+</body>
+
+</html>
