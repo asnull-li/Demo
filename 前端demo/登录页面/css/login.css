@@ -1,0 +1,68 @@
+.wrapper {
+  width: 500px;
+  margin: 0 auto;
+}
+.wrapper .header {
+  height: 120px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.wrapper .header svg {
+  width: 55px;
+  height: 55px;
+}
+.wrapper .header h1 {
+  font-size: 20px;
+  margin-left: 15px;
+}
+.wrapper .main {
+  width: 100%;
+  margin: 2px 15px;
+  padding: 15px;
+  background-color: #fff;
+  border-radius: 3px;
+  box-shadow: 1px 1px 3px rgba(18, 18, 18, 0.2);
+}
+.wrapper .main h2 {
+  height: 80px;
+  text-align: center;
+  line-height: 80px;
+}
+.wrapper .main .edit {
+  width: 100%;
+  text-align: center;
+}
+.wrapper .main .edit input {
+  width: 70%;
+  height: 45px;
+  margin: 10px 0;
+  border: 1px solid #eee;
+  padding: 5px;
+}
+.wrapper .main .btn a {
+  display: block;
+  width: 70%;
+  height: 40px;
+  line-height: 40px;
+  margin: 15px auto;
+  background-color: #448AFF;
+  text-align: center;
+  color: #fff;
+  font-size: 17px;
+  border-radius: 5px;
+}
+.wrapper .main .line {
+  height: 1px;
+  width: 60%;
+  background-color: #eee;
+  margin: 35px auto;
+}
+.wrapper .main .reg {
+  width: 100%;
+  text-align: center;
+  margin-bottom: 30px;
+}
+.wrapper .main .reg a {
+  color: #448AFF;
+}
