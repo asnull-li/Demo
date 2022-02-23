@@ -1,0 +1,104 @@
+//out:../css/index.css
+
+// 导入公共样式
+@import 'common';
+body{
+    background-color: #fff;
+}
+
+.main {
+    padding-left: 25px;
+    padding-right: 25px;
+    padding-top: 30px;
+    background-color: #fff;
+
+    .title {
+        display: flex;
+        justify-content: space-between;
+
+        a {
+            color: #1565C0;
+        }
+    }
+
+    .search {
+        display: flex;
+        height: 40px;
+        align-items: center;
+        margin: 15px 0;
+
+        input {
+            height: 35px;
+            padding: 5px;
+            border: 1px solid #eee;
+            background-color: #fff;
+        }
+
+        .btn {
+            height: 35px;
+            background-color: #fff;
+            text-align: center;
+            line-height: 35px;
+            margin-left: 15px;
+            padding: 0 10px;
+            border: 1px solid #eee;
+            cursor: pointer;
+        }
+    }
+
+    table {
+        width: 100%;
+
+        border-collapse: collapse;
+
+        thead {
+            width: 100%;
+            background-color: rgba(238, 238, 238, 0.5);
+
+            tr {
+                height: 60px;
+
+                div {
+                    display: flex;
+                    justify-content: space-between;
+                    padding-left: 15px;
+                    cursor: pointer;
+
+                    svg {
+                        opacity: 0;
+                        width: 20px;
+                        height: 20px;
+                    }
+
+                    &:hover svg {
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        tbody {
+            tr {
+                height: 60px;
+                border-bottom: 1px solid rgba(238, 238, 238, 0.466);
+
+                td {
+                    padding-left: 15px;
+
+                    a {
+                        color: #1565C0;
+                    }
+                }
+            }
+        }
+        
+    }
+    .noData{
+        display: none;
+        width: 100%;
+        text-align: center;
+        color: #BDBDBD;
+        padding: 15px 0;
+        font-size: 20px;
+    }
+}

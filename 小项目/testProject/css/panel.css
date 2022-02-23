@@ -1,0 +1,227 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  border-bottom: 4px solid #eee;
+  background-color: #fff;
+  z-index: 9999;
+}
+.header .left {
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+.header .left svg {
+  width: 55px;
+  height: 55px;
+  margin: 0 15px;
+}
+.header .left h1 {
+  font-size: 18px;
+}
+.header .left .nav {
+  display: flex;
+  align-items: center;
+  margin-left: 15px;
+}
+.header .left .nav > li {
+  position: relative;
+  margin: 0 10px;
+}
+.header .left .nav > li .project {
+  visibility: hidden;
+  position: absolute;
+  left: -150px;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(18, 18, 18, 0.3);
+  opacity: 0;
+  z-index: 999;
+}
+.header .left .nav > li .project h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #9E9E9E;
+}
+.header .left .nav > li .project li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+.header .left .nav > li .project a {
+  margin: 25px 0;
+  color: #448AFF;
+}
+.header .left .nav > li .user {
+  visibility: hidden;
+  position: absolute;
+  left: -100px;
+  width: 300px;
+  padding: 15px;
+  background-color: #fff;
+  box-shadow: 1px 1px 3px rgba(18, 18, 18, 0.3);
+  opacity: 0;
+  z-index: 999;
+}
+.header .left .nav > li .user h2 {
+  font-weight: 400;
+  font-size: 18px;
+  color: #9E9E9E;
+}
+.header .left .nav > li .user li {
+  margin: 15px 0;
+  cursor: pointer;
+}
+.header .right {
+  position: relative;
+  display: flex;
+  align-items: center;
+  height: 80px;
+  margin-right: 25px;
+  font-size: 18px;
+}
+.header .right a {
+  display: inline-block;
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  color: #448AFF;
+}
+.header .right .exit {
+  display: none;
+  font-size: 16px;
+  padding: 0 10px;
+  background-color: #eee;
+  border-radius: 4px;
+}
+body {
+  background-color: #fff;
+}
+.main {
+  display: flex;
+  width: 100%;
+  margin-bottom: 0;
+  background-color: #fff;
+}
+.main .side {
+  width: 180px;
+  height: 100vh;
+  border-right: 2px solid #eee;
+}
+.main .side a {
+  display: block;
+  height: 50px;
+  line-height: 50px;
+  padding-left: 15px;
+  font-size: 17px;
+}
+.main .side a:hover {
+  color: #448AFF;
+  background-color: #4489ff2f;
+}
+.main .side .current {
+  color: #448AFF;
+  background-color: #4489ff2f;
+  border-right: #1976D2 solid 4px;
+}
+.main .content {
+  flex: 1;
+  padding-top: 50px;
+  padding-left: 20px;
+}
+.main .content .kanban .head h2 {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.main .content .kanban .list {
+  display: flex;
+  flex-wrap: wrap;
+}
+.main .content .kanban .list section {
+  width: 280px;
+  height: 450px;
+  background-color: #F5F5F5;
+  padding: 15px;
+  margin-right: 15px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+.main .content .kanban .list section .title {
+  display: flex;
+  justify-content: space-between;
+}
+.main .content .kanban .list section .title h3 {
+  font-weight: normal;
+  font-size: 19px;
+  height: 35px;
+  line-height: 35px;
+}
+.main .content .kanban .list section ul {
+  margin-top: 10px;
+}
+.main .content .kanban .list section ul li {
+  width: 100%;
+  background-color: #fff;
+  border-radius: 3px;
+  padding: 10px;
+  margin: 10px 0;
+}
+.main .content .kanban .list section ul li h4 {
+  font-weight: normal;
+  margin-bottom: 10px;
+}
+.main .content .kanban .list section .edit {
+  width: 100%;
+  height: 40px;
+  font-size: 17px;
+  background-color: #fff;
+  padding-left: 10px;
+  border: #eee solid 1px;
+}
+.main .content .kanban .list section button {
+  width: 100%;
+  height: 30px;
+  color: #fff;
+  background-color: #448AFF;
+  border-radius: 3px;
+  border: none;
+  margin: 15px 0;
+  cursor: pointer;
+}
+.main .content .rwz {
+  display: none;
+}
+.main .content .rwz .head h2 {
+  font-weight: 400;
+  font-size: 25px;
+  margin-bottom: 25px;
+}
+.main .content .rwz .list {
+  width: 100%;
+  padding-right: 15px;
+}
+.main .content .rwz .list li {
+  display: flex;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.main .content .rwz .list li .info {
+  flex: 1;
+}
+.main .content .rwz .list li .info .title {
+  font-size: 18px;
+  margin: 10px 0;
+}
+.main .content .rwz .list li .info .bgtime,
+.main .content .rwz .list li .info .endtime {
+  color: #BDBDBD;
+}
+.main .content .rwz .list li .info .other {
+  display: inline-block;
+  margin-top: 10px;
+  color: #448AFF;
+}
+.main .content .rwz .list li .delete {
+  color: #448AFF;
+}

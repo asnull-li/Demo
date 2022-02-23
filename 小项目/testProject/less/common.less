@@ -1,0 +1,114 @@
+//out:false
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 80px;
+    border-bottom: 4px solid #eee;
+    background-color: #fff;
+    z-index: 9999;
+
+    .left {
+        display: flex;
+        align-items: center;
+        height: 80px;
+
+        svg {
+            width: 55px;
+            height: 55px;
+            margin: 0 15px;
+        }
+
+        h1 {
+            font-size: 18px;
+        }
+
+        .nav {
+            display: flex;
+            align-items: center;
+            margin-left: 15px;
+
+            >li {
+                position: relative;
+                margin: 0 10px;
+
+                .project {
+                    visibility: hidden;
+                    position: absolute;
+                    left: -150px;
+                    width: 300px;
+                    padding: 15px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 3px rgba(18, 18, 18, 0.3);
+                    opacity: 0;
+                    z-index: 999;
+
+                    h2 {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #9E9E9E;
+                    }
+
+                    li {
+                        margin: 15px 0;
+                        cursor: pointer;
+                    }
+
+                    a {
+                        margin: 25px 0;
+                        color: #448AFF;
+                    }
+                }
+
+                .user {
+                    visibility: hidden;
+                    position: absolute;
+                    left: -100px;
+                    width: 300px;
+                    padding: 15px;
+                    background-color: #fff;
+                    box-shadow: 1px 1px 3px rgba(18, 18, 18, 0.3);
+                    opacity: 0;
+                    z-index: 999;
+
+                    h2 {
+                        font-weight: 400;
+                        font-size: 18px;
+                        color: #9E9E9E;
+                    }
+
+                    li {
+                        margin: 15px 0;
+                        cursor: pointer;
+                    }
+                }
+            }
+        }
+    }
+
+    .right {
+        position: relative;
+        display: flex;
+        align-items: center;
+        height: 80px;
+        margin-right: 25px;
+        font-size: 18px;
+
+        a{
+            display: inline-block;
+            height: 30px;
+            line-height: 30px;
+            text-align: center;
+            color: #448AFF;
+        }
+        .exit{
+            display: none;
+            font-size: 16px;
+            padding: 0 10px;
+            background-color: #eee;
+            border-radius: 4px;
+
+        }
+
+
+    }
+}

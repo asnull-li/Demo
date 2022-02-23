@@ -1,0 +1,165 @@
+//out:../css/panel.css
+// 导入公共样式
+//out:../css/panel.css
+@import 'common';
+
+body {
+    background-color: #fff;
+}
+
+.main {
+    display: flex;
+    width: 100%;
+    margin-bottom: 0;
+    background-color: #fff;
+
+    .side {
+        width: 180px;
+        height: 100vh;
+        border-right: 2px solid #eee;
+
+        a {
+            display: block;
+            height: 50px;
+            line-height: 50px;
+            padding-left: 15px;
+            font-size: 17px;
+
+            &:hover {
+                color: #448AFF;
+                background-color: #4489ff2f;
+                
+            }
+        }
+        .current{
+            color: #448AFF;
+            background-color: #4489ff2f;
+            border-right: #1976D2 solid 4px;
+        }
+
+    }
+
+    .content {
+        flex: 1;
+        padding-top: 50px;
+        padding-left: 20px;
+        .kanban {
+            
+            .head {
+                h2 {
+                    font-weight: 400;
+                    font-size: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+
+
+            .list {
+                display: flex;
+                flex-wrap: wrap;
+
+
+
+                section {
+                    width: 280px;
+                    height: 450px;
+                    background-color: #F5F5F5;
+                    padding: 15px;
+                    margin-right: 15px;
+                    border-radius: 5px;
+                    margin-bottom: 10px;
+
+
+                    .title {
+                        display: flex;
+                        justify-content: space-between;
+
+                        h3 {
+                            font-weight: normal;
+                            font-size: 19px;
+                            height: 35px;
+                            line-height: 35px;
+                        }
+                    }
+
+                    ul {
+                        margin-top: 10px;
+
+                        li {
+                            width: 100%;
+                            background-color: #fff;
+                            border-radius: 3px;
+                            padding: 10px;
+                            margin: 10px 0;
+
+                            h4 {
+                                font-weight: normal;
+                                margin-bottom: 10px;
+                            }
+                        }
+                    }
+
+                    .edit {
+                        width: 100%;
+                        height: 40px;
+                        font-size: 17px;
+                        background-color: #fff;
+                        padding-left: 10px;
+                        border: #eee solid 1px;
+                    }
+
+                    button {
+                        width: 100%;
+                        height: 30px;
+                        color: #fff;
+                        background-color: #448AFF;
+                        border-radius: 3px;
+                        border: none;
+                        margin: 15px 0;
+                        cursor: pointer;
+                    }
+
+                }
+            }
+
+        }
+        .rwz{
+            display: none;
+            .head {
+                h2 {
+                    font-weight: 400;
+                    font-size: 25px;
+                    margin-bottom: 25px;
+                }
+            }
+            .list{
+                width: 100%;
+                padding-right: 15px;
+                li{
+                    display: flex;
+                    width: 100%;
+                    margin-bottom: 10px;
+                    .info{
+                        flex: 1;
+                        .title{
+                            font-size: 18px;
+                            margin: 10px 0;
+                        }
+                        .bgtime,.endtime{                  
+                            color: #BDBDBD;
+                        }
+                        .other{
+                            display: inline-block;
+                            margin-top: 10px;
+                            color: #448AFF;
+                        }
+                    }
+                    .delete{
+                        color: #448AFF;
+                    }
+                }
+            }
+        }
+
+    }
+}
