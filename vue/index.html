@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="vue.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <h2>hello,{{name}}</h2>
+        <input @keyup.enter="setname" type="text" name="" id="">
+        <button @click="my">{{n}}</button> {{fullname}}
+        <button @click="n++"> 点我+1</button>
+        <div>{{html}}</div>
+        <hr>
+        <student></student>
+    </div>
+    <script type="text/javascript">
+        const student = Vue.extend({
+            template: `<h2>姓名：{{name}}</h2>`,
+            data() {
+                return {
+                    name: 'Asnull111'
+                }
+            }
+        })
+        new Vue({
+            el: "#app",
+            data: {
+                name: "Asnull",
+                age: 11,
+                html: "<h1>ghggg</h1>",
+                n: 1
+            },
+            methods: {
+                my(w) {
+                    console.log(w)
+                },
+                setname(e) {
+                    console.log(e)
+                    this.name = e.target.value
+                }
+            },
+            components: {
+                student
+            },
+
+            computed: {
+                fullname: {
+                    get() {
+                        return this.name + '！'
+                    }
+                }
+            }
+        })
+    </script>
+
+</body>
+
+</html>

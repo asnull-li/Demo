@@ -1,0 +1,23 @@
+{
+  "id": "3497009",
+  "name": "fy",
+  "font_family": "iconfont",
+  "css_prefix_text": "icon-",
+  "description": "",
+  "glyphs": [
+    {
+      "icon_id": "4425819",
+      "name": "选择-方框",
+      "font_class": "xuanze-fangkuang",
+      "unicode": "e793",
+      "unicode_decimal": 59283
+    },
+    {
+      "icon_id": "5831260",
+      "name": "方框",
+      "font_class": "fangkuang",
+      "unicode": "e641",
+      "unicode_decimal": 58945
+    }
+  ]
+}

@@ -1,0 +1,51 @@
+*{
+    padding: 0;
+    margin: 0;
+}
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+}
+
+.wrapper{
+    width: 1000px;
+    margin: 0 auto;
+}
+.wrapper ul{
+    margin: 20px 0;
+}
+.wrapper li{
+    float: left;
+    position: relative;
+    transform-style: preserve-3d;
+    /* transform: rotateX(-20deg) rotateY(30deg); */
+    transition: all 0.5s;
+}
+
+.wrapper li a{
+    display: block;
+    width: 100px;
+    height: 50px;
+    color: #fff;
+    text-align: center;
+    line-height: 50px;
+    
+    
+}
+.wrapper li a:nth-child(1){
+    background-color: red;
+    transform: rotateX(90deg) translateZ(25px) translateY(-25px);
+}
+.wrapper li a:nth-child(2){
+    position: absolute;
+    top: 0;
+    background-color: blue;
+   
+}
+
+.wrapper li:hover{
+    transform: rotateX(-90deg);
+}
+

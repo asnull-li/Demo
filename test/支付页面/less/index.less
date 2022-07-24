@@ -1,0 +1,49 @@
+//out:../css/index.css
+@rootSize:37.5rem;
+
+body{
+    background-color: #f7f7f8;
+}
+
+// 主体部分
+.main{
+    padding: (10 / @rootSize) (10 / @rootSize) (79 / @rootSize) (10 / @rootSize)
+}
+
+// 支付部分
+.pay{
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: (79 / @rootSize);
+    background-color: #fff;
+    font-size: (11 / @rootSize);
+    padding-left: (10 / @rootSize);
+    border-top: 1px solid #ededed;
+    span{
+        font-size: (11 / @rootSize);
+        color: #cf4444;
+        margin-left: (12 / @rootSize);
+        flex: 1;
+        i{
+            font-size: (20 / @rootSize);
+        }
+    }
+    a{
+        display: inline-block;
+        width: (91 / @rootSize);
+        height: (35 / @rootSize);
+        background-image: linear-gradient(90deg, 
+            #6fc2aa 5%, 
+            #54b196 100%);
+        border-radius: (3 / @rootSize);
+        text-align: center;
+        line-height: (35 / @rootSize);
+        color: #fff;
+        font-size: (13 / @rootSize);
+        margin-right: (11 / @rootSize);
+    }
+}

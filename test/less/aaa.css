@@ -1,0 +1,14 @@
+.father {
+  width: 100%;
+}
+.father .son {
+  width: 100px;
+  height: 100px;
+  background-color: #fff;
+}
+.father .son:nth-child(1) {
+  font-size: 18px;
+}
+.father:hover {
+  background-color: red;
+}

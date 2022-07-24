@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        
+        li {
+            background-color: blue;
+            list-style: none;
+            flex: 1;
+        }
+        
+        .heads ul {
+            display: flex;
+            margin: 0;
+            padding: 0;
+        }
+        
+        .heads li a {
+            display: block;
+            height: 55px;
+            line-height: 55px;
+            text-align: center;
+            color: white;
+            text-decoration: none;
+        }
+        
+        .content {
+            background-color: pink;
+            display: none;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="heads">
+        <ul>
+            <li>
+                <a href="javascript:;">测试界面1</a>
+            </li>
+            <li>
+                <a href="javascript:;">测试界面1</a>
+            </li>
+            <li>
+                <a href="javascript:;">测试界面1</a>
+            </li>
+            <li>
+                <a href="javascript:;">测试界面1</a>
+            </li>
+        </ul>
+    </div>
+    <div class="body">
+        <div class="content">
+            1111111111111111111
+        </div>
+        <div class="content">
+            2222222222222222222
+        </div>
+        <div class="content">
+            33333333333333333333333
+        </div>
+        <div class="content">
+            444444444444444444
+        </div>
+    </div>
+    <script>
+        var lis = document.querySelector('ul').children;
+        for (var i = 0; i < lis.length; i++) {
+            // 插入自定义属性
+            lis[i].querySelector('a').setAttribute('data-index', i);
+            // 注册事件
+            lis[i].querySelector('a').onclick = function() {
+                var content = document.querySelectorAll('.content');
+                for (var i = 0; i < lis.length; i++) {
+                    lis[i].querySelector('a').style.backgroundColor = '';
+                    content[i].style.display = 'none';
+                }
+                this.style.backgroundColor = 'red';
+                var index = this.getAttribute('data-index');
+                content[index].style.display = 'block';
+
+            }
+
+        }
+    </script>
+</body>
+
+</html>

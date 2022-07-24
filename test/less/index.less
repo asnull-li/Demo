@@ -1,0 +1,16 @@
+// out:aa/aaa.css
+
+.father{
+    width: 100%;
+    .son{
+        width: 100px;
+        height: 100px;
+        background-color: #fff;
+        &:nth-child(1){
+            font-size: 18px;
+        }
+    }
+    &:hover{
+        background-color: red;
+    }
+}

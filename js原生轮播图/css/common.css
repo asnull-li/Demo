@@ -1,0 +1,184 @@
+/* 公共部分的样式代码 */
+/* 版心 */
+.wrapper{
+    width: 1240px;
+    margin: 0 auto;
+}
+
+/* 快捷导航 */
+.shortcut{
+    height: 52px;
+    background-color: #333333;
+}
+
+.shortcut li{
+    float: right;
+    height: 52px;
+    line-height: 52px;
+}
+
+.shortcut li a{
+    font-size: 14px;
+    color: #dcdcdc;
+    padding: 0 16px;
+    border-right: 1px solid #666666;
+}
+
+.shortcut li:first-child a{
+    border-right: 0;
+}
+
+
+.shortcut li:first-child a::before{
+    content: "";
+    display: inline-block;
+    width: 11px;
+    height: 16px;
+    padding-right: 8px;
+    background-image: url(../images/sprites.png);
+    background-position: -160px -70px;
+    vertical-align: middle;
+}
+
+/* 头部 */
+.header{
+    height: 70px;
+    margin: 30px auto;
+}
+/* logo */
+.header h1 a{
+    float: left;
+    width: 207px;
+    height: 70px;
+    font-size: 0px;
+    background-image: url(../images/logo.png);
+    background-size: contain;
+}
+
+/* 导航 */
+.nav{
+    float: left;
+    margin-left: 40px;
+}
+.nav li{
+    float: left;
+    height: 70px;
+    line-height: 70px;
+    margin-right: 48px;
+}
+.nav li a{
+    padding-bottom: 7px;
+}
+
+.nav li a:hover{
+    color: #27ba9b;
+    border-bottom: #27ba9b 1px solid;
+}
+
+/* 搜索 */
+.search{
+    position: relative;
+    float: left;
+    width: 172px;
+    height: 30px;
+    margin-left: 36px;
+    margin-top: 24px;
+    border-bottom: 2px solid #e7e7e7;;
+}
+
+.search input{
+    width: 172px;
+   height: 28px;
+   
+}
+
+.search input::placeholder{
+    padding-left: 31px;
+    font-size: 14px;
+    color: #cccccc;
+}
+
+.search span{
+    position: absolute;
+    left: 1px;
+    top: 1px;
+    width: 18px;
+    height: 18px;
+    background-image: url(../images/sprites.png);
+    background-position: -79px -69px;
+}
+
+/* 购物车 */
+.shop-card a{
+    position: relative;
+    float: left;
+    width: 23px;
+    height: 23px;
+    margin-top: 28px;
+    margin-left: 15px;
+    background-image: url(../images/sprites.png);
+    background-position: -120px -69px;
+}
+
+.shop-card span{
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    width: 20px;
+    height: 17px;
+    font-size: 13px;
+    color: #fff;
+    text-align: center;
+    background-color: #e26237;
+    border-radius: 50%;
+
+}
+
+/* 页脚 */
+.footer{
+    height: 345px;
+    background-color: #333;
+    padding-top: 60px;
+}
+.footer .wrapper{
+    padding-left: 38px;
+}
+.footer li{
+    float: left;
+    color: #fff;
+    font-size: 28px;
+    margin-right: 303px;
+}
+
+.footer li:nth-child(3){
+    margin-right: 0;
+}
+
+.footer li span{
+    display: inline-block;
+    height: 58px;
+    width: 58px;
+    margin-right: 20px;
+    background-image: url(../images/sprites.png);
+    background-position: 0 0;
+    vertical-align: middle;
+}
+
+.footer .fengexiang{
+    width: 1393px;
+	height: 1px;
+	background-color: #434343;
+    margin: 45px auto;
+}
+.footer .ft{
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+}
+.footer .ft a{
+    color: #999;
+    margin: 0 5px;
+}
+.footer .ft p{
+    margin-top: 10px;
+}

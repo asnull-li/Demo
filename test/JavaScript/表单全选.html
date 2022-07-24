@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        
+        table {
+            background-color: rgba(0, 0, 0, 0.5);
+        }
+        
+        thead tr {
+            background-color: #eee;
+        }
+    </style>
+</head>
+
+<body>
+    <table>
+        <thead>
+            <tr>
+                <td><input id="checkAll" type="checkbox">全选</td>
+                <td>商品</td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>发电方式对方的</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>发电方式对方的</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>发电方式对方的</td>
+            </tr>
+            <tr>
+                <td><input type="checkbox"></td>
+                <td>发电方式对方的</td>
+            </tr>
+        </tbody>
+    </table>
+    <script>
+        // 全选框
+        var checkall = document.querySelector('#checkAll');
+        // 所有选项框
+        var checkboxs = document.querySelector('tbody').querySelectorAll('input');
+        // 注册事件
+        checkall.onclick = function() {
+            for (var i = 0; i < checkboxs.length; i++) {
+                checkboxs[i].checked = checkall.checked;
+            }
+        }
+
+        // 单个选项框
+        for (var i = 0; i < checkboxs.length; i++) {
+            // 循环注册事件
+            checkboxs[i].onclick = function() {
+                var checkAllStatus = true;
+                for (var i = 0; i < checkboxs.length; i++) {
+                    if (!checkboxs[i].checked) {
+                        checkAllStatus = false;
+                        break;
+                    }
+                }
+                checkall.checked = checkAllStatus;
+            }
+        }
+    </script>
+</body>
+
+</html>

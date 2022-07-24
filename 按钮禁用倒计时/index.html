@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" placeholder="请输入你的手机号">
+    <button>发送验证码</button>
+
+    <script>
+        // 获取元素对象
+        var sendEl = document.querySelector('button');
+        // 绑定事件
+        sendEl.addEventListener('click', function() {
+            // 倒计时秒数
+            var seconds = 5;
+            sendEl.innerHTML = seconds + '秒后重发';
+            // 禁用按钮
+            sendEl.disabled = true;
+            // 绑定定时器
+            var timer = setInterval(clock, 1000);
+            // 定时器回调函数
+            function clock() {
+                seconds--;
+                if (seconds == 0) {
+                    // 倒计时结束 清除定时器
+                    clearInterval(timer);
+                    sendEl.innerHTML = '发送验证码';
+                    sendEl.disabled = false;
+                } else {
+                    sendEl.innerHTML = seconds + '秒后重发';
+                }
+
+            }
+        })
+    </script>
+</body>
+
+</html>

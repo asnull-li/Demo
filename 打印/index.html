@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>湛江市霞山区人民法院</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="lib/iconfont/iconfont.css">
+</head>
+
+<body>
+    <div class="print">
+        <!--startprint-->
+        <div class="head">
+            <h1>
+                湛江市霞山区人民法院 <br>关于创建新时代法官法治文明实践站的 <br>征求意见表
+            </h1>
+        </div>
+        <p>填报人：案号（2022）粤0803执××号××执行人× ×× </p>
+        <table>
+            <tr>
+                <th>序号</th>
+                <th>内容</th>
+                <th>意见建议 <br>（如有，请在方框内打“√”）
+                </th>
+                <th>备注</th>
+            </tr>
+            <tr>
+                <td class="xh">1</td>
+                <td>您对执行案件是否感受到公平正义？</td>
+                <td><i class="iconfont icon-xuanze-fangkuang"></i>感受到很公正；<i class="iconfont icon-fangkuang"></i>感受到到一般公正；<i class="iconfont icon-fangkuang"></i> 感受到不公正; <i class="iconfont icon-fangkuang"></i> 不进行评价。
+                </td>
+                <td>内容内容内容内容内容内容s</td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>对霞山法院整体工作情况的评价是？</td>
+                <td><i class="iconfont icon-xuanze-fangkuang"></i>满意；<i class="iconfont icon-fangkuang"></i>基本满意； <i class="iconfont icon-fangkuang"></i>不满意。<i class="iconfont icon-fangkuang"></i>不进行评价。
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>对霞山法院法官工作能力及作风纪律的评价是？</td>
+                <td><i class="iconfont icon-xuanze-fangkuang"></i>满意；<i class="iconfont icon-fangkuang"></i>基本满意； <i class="iconfont icon-fangkuang"></i>不满意。<i class="iconfont icon-fangkuang"></i>不进行评价。
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>5</td>
+                <td>对近年来霞山法院参与创文工作、疫情防控、乡村振兴、社会综合治理、平安建设等专项行动的评价是？</td>
+                <td><i class="iconfont icon-xuanze-fangkuang"></i>满意；<i class="iconfont icon-fangkuang"></i>基本满意； <i class="iconfont icon-fangkuang"></i>不满意。<i class="iconfont icon-fangkuang"></i>不进行评价。
+                </td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>6</td>
+                <td>认为法院工作中需要改进的突出问题有哪些？对执行工作有什么要求？</td>
+                <td>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</td>
+                <td></td>
+            </tr>
+            <tr>
+                <td>7</td>
+                <td>对霞山法院关于新时代法官法治文明实践站的创建工作有哪些意见和建议？</td>
+                <td>内容内容内容内容内容内容内容内容内容内容内容内容内容内容内容</td>
+                <td></td>
+            </tr>
+        </table>
+        <div class="time">时间：2022年7月3日</div>
+
+        <!--endprint-->
+    </div>
+    <div class="printBtn">
+        <button type="button" id="printDetails" onclick="printHtml()">打印详情</button>
+    </div>
+
+
+    <script>
+        // 打印详情
+        function printHtml() {
+            var bdhtml = window.document.body.innerHTML; //获取当前页的html代码
+            var sprnstr = "<!--startprint-->"; //设置打印开始区域
+            var eprnstr = "<!--endprint-->"; //设置打印结束区域
+            var prnhtml = bdhtml.substr(bdhtml.indexOf(sprnstr) + 17); //从开始代码向后取html
+            var prnhtml = prnhtml.substring(0, prnhtml.indexOf(eprnstr)); //从结束代码向前取html
+            window.document.body.innerHTML = prnhtml;
+            window.print();
+            window.document.body.innerHTML = bdhtml; //还原页面
+        }
+    </script>
+</body>
+
+</html>
