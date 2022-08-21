@@ -3,7 +3,7 @@
 // 	console.log(item);
 // })
 
-const fs = require("fs")
+// const fs = require("fs")
 
 /* fs.readFile('test.txt', 'utf-8', function(err, data) {
     console.log(data)
@@ -57,19 +57,32 @@ const fs = require("fs")
 
 // console.log(http)
 
-const express = require('express');
-// 导入路由模块
-const userRouter = require('./api');
+// const express = require('express');
+// // 导入路由模块
+// const userRouter = require('./api');
 
-// 创建服务器
-const app = express();
+// // 创建服务器
+// const app = express();
 
-const host = '192.168.43.235';
+// const host = '192.168.43.235';
 
-// 注册路由
-app.use(userRouter);
+// // 注册路由
+// app.use(userRouter);
 
-// 启动服务器
-app.listen(8080, () => {
-    console.log('服务器已启动.！http://' + host + ':80');
+// // 启动服务器
+// app.listen(8080, () => {
+//     console.log('服务器已启动.！http://' + host + ':80');
+// })
+
+const funJSON = require('funjson');
+const fs = require('fs');
+fs.readFile('test.txt', 'utf-8', function(err, data) {
+    var json = data
+    json = json.replace(/\n/g, "").replace(/\r/g, ""); //去掉字符串中的换行符
+
+    json = json.replace(/\n/g, "").replace(/\s|\xA0/g, ""); //去掉字符串中的所有空格
+
+    var jsonObj = eval('(' + json + ')'); //将字符串解析成json对象
+
+    console.log(jsonObj);
 })
