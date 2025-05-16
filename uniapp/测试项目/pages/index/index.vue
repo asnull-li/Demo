@@ -1,9 +1,12 @@
 <template>
 	<view class="content">
-		<image class="logo" src="/static/logo.png"></image>
-		<view class="text-area">
-			<text class="title">{{title}}</text>
+		<view class="example-body">
+			<uni-file-picker @select="select"  ref="files" limit="9" title="最多选择9张图片" :auto-upload="false"
+				v-model="imageValue">
+			</uni-file-picker>
+			<button @click="uploads()">上传文件</button>
 		</view>
+
 	</view>
 </template>
 
@@ -11,14 +14,23 @@
 	export default {
 		data() {
 			return {
-				title: 'Hello'
+				imageValue: [1],
+				hhhhhhh: 11111,
+				files: [{
+					"name": "file.txt",
+					"extname": "txt",
+					"url": "https://xxxx",
+					// ...
+				}]
 			}
 		},
-		onLoad() {
-
-		},
 		methods: {
-
+			uploads() {
+				this.$refs.files.upload()
+			},
+			select(e){
+							console.log('选择文件：',e)
+						},
 		}
 	}
 </script>
